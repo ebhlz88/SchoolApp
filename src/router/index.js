@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Table from '../components/Table.vue'
 import Main from '../views/Main.vue'
+import Cards from '../views/Cards.vue'
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -13,6 +15,11 @@ const router = createRouter({
       path: '/main',
       name: 'main',
       component: Main
+    },
+    {
+      path: '/card',
+      name: 'card',
+      component: Cards
     },
     // {
     //   path: '/about',
