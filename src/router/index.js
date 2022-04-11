@@ -1,18 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Table from '../components/Table.vue'
 import Main from '../views/Main.vue'
 import Cards from '../views/Cards.vue'
+import Students from '../views/Students.vue'
+import FormContainer from '../components/FormContainer.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'table',
-      component: Table
-    },
-    {
-      path: '/main',
       name: 'main',
       component: Main
     },
@@ -20,6 +16,16 @@ const router = createRouter({
       path: '/card',
       name: 'card',
       component: Cards
+    },
+    {
+      path: '/students',
+      name: 'students',
+      component: Students
+    },
+    {
+      path: '/cont',
+      name: 'FormContainer',
+      component: FormContainer
     },
     // {
     //   path: '/about',

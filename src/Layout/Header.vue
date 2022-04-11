@@ -23,7 +23,7 @@
               >
             </li>
             <li >
-              <router-link  to="/list"
+              <router-link  to="/students"
                 ><b>Student</b></router-link
               >
             </li>

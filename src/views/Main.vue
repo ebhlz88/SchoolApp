@@ -11,7 +11,7 @@
                                     Username
                                 </label>
                                 <input
-                                    class="shadow appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    class="inputprimary"
                                     id="username" type="text" placeholder="Username" v-model="logindata.username">
                             </div>
                             <div class="mb-6">
@@ -19,7 +19,7 @@
                                     Password
                                 </label>
                                 <input
-                                    class="shadow appearance-none border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                                    class="inputprimary"
                                     id="password" type="password" placeholder="******************" v-model="logindata.password">
                             </div>
                             <div class="flex items-center justify-between">
@@ -59,8 +59,9 @@ export default {
 },
 methods:{
   login(){
-ApiService.postRequest('login',this.logindata).then(res=>{
+    ApiService.postRequest('login',this.logindata).then(res=>{
     AuthService.setAccessToken(res.data.token)
+    this.$router.push('/card')
 })
   },
 }

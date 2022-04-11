@@ -10,51 +10,27 @@
                 #
               </th>
               <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                First
+                Name
               </th>
               <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                Last
+                F,Name
               </th>
               <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                Handle
+                Address
               </th>
             </tr>
           </thead>
           <tbody>
-            <tr class="bg-white border transition duration-300 ease-in-out hover:bg-gray-200 hover:bg-slate-100">
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">1</td>
+            <tr v-for="items in data" :key="items.id" class="bg-white border transition duration-300 ease-in-out hover:bg-gray-200 hover:bg-slate-100">
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{items.rollnbr}}</td>
               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                Mark
+                {{items.s_name}}
               </td>
               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                Otto
+                {{items.s_fname}}
               </td>
               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                @mdo
-              </td>
-            </tr>
-            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">2</td>
-              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                Jacob
-              </td>
-              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                Thornton
-              </td>
-              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                @fat
-              </td>
-            </tr>
-            <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">3</td>
-              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                Larry
-              </td>
-              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                Wild
-              </td>
-              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                @twitter
+                {{items.address}}
               </td>
             </tr>
           </tbody>
@@ -67,7 +43,11 @@
 
 <script>
 export default {
+name:'MyTable',
+props:{
+  data:Object,
 
+}
 }
 </script>
 

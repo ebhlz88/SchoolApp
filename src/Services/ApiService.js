@@ -8,7 +8,7 @@ export default{
         })
     },
     getRequest(path){
-        return Axios.post(url+path)
+        return Axios.get(url+path)
     },
     getAuthHeader(){
         const token = AuthServive.getToken();
