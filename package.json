@@ -10,6 +10,7 @@
     "test:e2e:ci": "start-server-and-test preview http://127.0.0.1:5050/ 'cypress run'"
   },
   "dependencies": {
+    "@ionited/mask-vue": "^0.1.19",
     "axios": "^0.26.1",
     "jwt-decode": "^3.1.2",
     "pinia": "^2.0.13",

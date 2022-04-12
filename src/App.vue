@@ -12,7 +12,7 @@ import Header from './Layout/Header.vue'
   @apply bg-gradient-to-r from-blue to-lightblue
 }
 .inputprimary{
-  @apply shadow rounded w-full py-2 px-3 mb-3 leading-tight
+  @apply mt-1 md:h-10  block w-full shadow-sm sm:text-sm rounded-md md:border-slate border-2 md:p-2
 }
 
 </style>
