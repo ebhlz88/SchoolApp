@@ -5,7 +5,7 @@ import CommonHelper from '../Helpers/Common';
 class AuthService{
     token;
     constructor(){
-        this.token = localStorage.getItem('token');
+        this.token = localStorage.getItem('access_token');
 
     }
     getToken(){

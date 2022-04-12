@@ -14,7 +14,7 @@ export default{
         const token = AuthServive.getToken();
         if(token){
             return {
-                Authorization : 'token '+token
+                Authorization : 'Token '+token
             }
         }
     }
